@@ -303,7 +303,8 @@ ETL-GENERATOR/
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| Frontend | Streamlit 1.35+ | 5-page dashboard UI |
+| Frontend | Streamlit 1.35+ | 5-page enterprise dashboard |
+| Visualizations | Plotly 7.0+ | Gauges, bar, donut, area charts |
 | Backend | Python 3.11+ | Pipeline logic |
 | Database | SQLite + SQLAlchemy | Clean data storage |
 | Data Processing | Pandas 2.0+ / NumPy | ETL transformations |
@@ -311,7 +312,8 @@ ETL-GENERATOR/
 | Logging | Python logging (Rotating) | Audit trail |
 | Testing | pytest | 33 unit tests |
 
-**Theme:** Aqua `#6BBAA7` · Sunshine `#FBA100` · Lavender `#6C648B` · Dusty Rose `#B6A19E`
+**UI Theme:** Dark `#0B1020` · Aqua `#6BBAA7` · Gold `#FBA100` · Lavender `#6C648B` · Rose `#B6A19E`  
+**Typography:** Inter (UI) · JetBrains Mono (all numbers and code)
 
 ---
 
