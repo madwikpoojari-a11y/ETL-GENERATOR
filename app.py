@@ -582,11 +582,13 @@ if page == "⬛  Command Center":
             ("📊", "Report",     "Generated",                       "done"),
         ]
         node_cols = st.columns(len(stages))
+        tick_map = {
+            "done": f"<span style='color:{THEME['success']};'>✓</span>",
+            "fail": f"<span style='color:{THEME['error']};'>✗</span>",
+            "idle": f"<span style='color:{THEME['text_muted']};'>○</span>",
+            "run":  f"<span style='color:{THEME['blue']};'>◉</span>",
+        }
         for i, (icon, name, desc, state) in enumerate(stages):
-            tick_map = {"done": f"<span style='color:{THEME[\"success\"]};'>✓</span>",
-                        "fail": f"<span style='color:{THEME[\"error\"]};'>✗</span>",
-                        "idle": f"<span style='color:{THEME[\"text_muted\"]};'>○</span>",
-                        "run":  f"<span style='color:{THEME[\"blue\"]};'>◉</span>"}
             with node_cols[i]:
                 st.markdown(f"""
                 <div class="pipeline-node {state}">
