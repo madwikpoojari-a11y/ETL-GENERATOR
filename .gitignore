@@ -30,7 +30,8 @@ reports/*.txt
 # Large dataset files — keep generators, ignore generated CSVs
 data/dirty_data.csv
 data/clean_reference.csv
-data/ecommerce_dataset.csv
+# ecommerce_dataset is small (50KB) — include in repo
+# data/ecommerce_dataset.csv
 data/ecommerce_clean_reference.csv
 
 # IDE / OS

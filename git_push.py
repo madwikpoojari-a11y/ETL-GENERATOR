@@ -1,7 +1,7 @@
 import subprocess, os
 
-REPO   = r"c:\Users\Lenovo\OneDrive\Documents\ETL Gen"
-LOG    = os.path.join(REPO, "logs", "git_push.log")
+REPO = r"c:\Users\Lenovo\OneDrive\Documents\ETL Gen"
+LOG  = os.path.join(REPO, "logs", "git_push.log")
 
 def run(cmd, label):
     print(f">>> {label}")
@@ -15,15 +15,15 @@ def run(cmd, label):
     if errs: print("STDERR:", "\n".join(errs))
     return r.returncode
 
-run(["git", "add", "."],                                       "git add")
-run(["git", "commit", "-m", "docs: godly README with full project documentation\n\n"
-     "- Architecture diagrams (ASCII)\n"
-     "- Self-healing agent rule table\n"
-     "- Quality scoring formula\n"
-     "- Full module reference table\n"
-     "- Complete test results\n"
-     "- Dataset specifications\n"
-     "- Future enhancements roadmap"],                         "git commit")
-rc = run(["git", "push", "-u", "origin", "main", "--force"],   "git push")
-
+run(["git", "add", "."], "git add")
+run(["git", "commit", "-m",
+     "data: add real Kaggle retail dataset + updated downloader\n\n"
+     "- Downloaded mohammadtalib786/retail-sales-dataset (1050 rows, 9 cols)\n"
+     "- Real columns: transaction_id, date, customer_id, gender, age,\n"
+     "  product_category, quantity, price_per_unit, total_amount\n"
+     "- Dirty data injected: nulls, dupes, bad dates, type mismatches\n"
+     "- Updated download_real_data.py to target only confirmed dataset\n"
+     "- Updated .gitignore to include small real dataset in repo"],
+    "git commit")
+rc = run(["git", "push", "-u", "origin", "main", "--force"], "git push")
 print("\nSUCCESS" if rc == 0 else "\nFAILED — check logs/git_push.log")
