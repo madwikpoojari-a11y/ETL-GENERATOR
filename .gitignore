@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# Database (runtime generated)
+database/*.db
+
+# Logs (runtime generated)
+logs/*.log
+logs/*.txt
+
+# Reports (runtime generated — keep folder, ignore files)
+reports/*.csv
+reports/*.json
+reports/*.txt
+
+# Large dataset files — keep generators, ignore generated CSVs
+data/dirty_data.csv
+data/clean_reference.csv
+data/ecommerce_dataset.csv
+data/ecommerce_clean_reference.csv
+
+# IDE / OS
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit
+.streamlit/
+
+# Pytest cache
+.pytest_cache/
+*.pytest_cache
+
+# Kiro IDE
+.kiro/
+
+# Temp
+*.tmp
+*.bak
+bootstrap_out.txt
+bootstrap_err.txt
