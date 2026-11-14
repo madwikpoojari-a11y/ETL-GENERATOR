@@ -14,6 +14,6 @@ def run(cmd, label):
     return r.returncode
 
 run(["git", "add", "."], "add")
-run(["git", "commit", "-m", "fix: resolve f-string backslash SyntaxError in pipeline node tick_map"], "commit")
+run(["git", "commit", "-m", "fix: gauge chart height and margin - number no longer overlaps arc"], "commit")
 rc = run(["git", "push", "-u", "origin", "main", "--force"], "push")
 print("SUCCESS" if rc == 0 else "FAILED")
