@@ -304,7 +304,7 @@ Open **http://localhost:8501**
 
 ---
 
-**To use the real e-commerce dataset (5,180 rows, 17 columns):**
+**To use the real Kaggle retail dataset (1,050 rows, 9 columns):**
 
 ```bash
 python data/download_real_data.py
@@ -335,10 +335,11 @@ Expected output:
 - **10 columns:** customer_id, customer_name, email, phone, city, state, product_category, purchase_amount, purchase_date, payment_method
 - **Injected errors:** 5% nulls, 3% duplicates, 8% bad emails, 10% bad dates, 5% type mismatches, 10% whitespace, 15% casing issues, 50 empty rows
 
-### 2. Real E-Commerce Dataset (generated/downloaded)
-- **5,180 rows · 17 columns**
-- **Columns:** order_id, customer_name, email, phone, product_category, product_name, quantity, unit_price, total_amount, order_date, delivery_date, city, state, order_status, payment_method, discount_pct, rating
-- Same dirty data injected programmatically for realistic pipeline testing
+### 2. Real Retail Dataset — Kaggle (`mohammadtalib786/retail-sales-dataset`)
+- **1,050 rows · 9 columns**
+- **Columns:** transaction_id, date, customer_id, gender, age, product_category, quantity, price_per_unit, total_amount
+- **Pipeline verified:** 1,006 rows loaded · quality score 97.5 → 100.0 · runtime 0.77s
+- Dirty data injected: 672 null cells, 37 duplicates, whitespace, type mismatches
 
 ---
 
