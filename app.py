@@ -1022,8 +1022,27 @@ elif page == "🔍  Validation":
         sc_col = "#3D8C7A" if q["total_score"] >= 80 else THEME["warning"] if q["total_score"] >= 60 else THEME["error"]
         ql, qm, qr = st.columns([1, 3, 1])
         with qm:
-            st.plotly_chart(gauge_chart(q["total_score"], "TOTAL QUALITY SCORE", sc_col),
-                           use_container_width=True, config=plotly_config())
+            st.markdown(f"""
+            <div class="etl-card" style="text-align:center;padding:2.5rem 2rem;">
+                <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;
+                     letter-spacing:.1em;color:{THEME['text_muted']};margin-bottom:1rem;">
+                     Total Quality Score
+                </div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:5rem;
+                     font-weight:800;color:{sc_col};line-height:1;">
+                     {q['total_score']:.1f}
+                </div>
+                <div style="font-size:1.5rem;color:{THEME['text_muted']};margin-bottom:1.5rem;">/ 100</div>
+                <div style="background:{THEME['border']};border-radius:8px;height:10px;overflow:hidden;">
+                    <div style="background:{sc_col};width:{q['total_score']}%;height:100%;
+                         border-radius:8px;transition:width .6s ease;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;
+                     font-size:0.7rem;color:{THEME['text_muted']};margin-top:4px;">
+                    <span>0</span><span>50</span><span>100</span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
 
         divider()
         section_label("DIMENSION BREAKDOWN")
