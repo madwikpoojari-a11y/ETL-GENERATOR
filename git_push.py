@@ -14,6 +14,10 @@ def run(cmd, label):
     return r.returncode
 
 run(["git", "add", "."], "add")
-run(["git", "commit", "-m", "fix: replace overflowing gauge chart with metric card + progress bar"], "commit")
+run(["git", "commit", "-m",
+     "deploy: add Streamlit Cloud config\n\n"
+     "- .streamlit/config.toml with dark theme\n"
+     "- cleaned requirements.txt for cloud compatibility\n"
+     "- .gitignore updated to track config but not secrets"], "commit")
 rc = run(["git", "push", "-u", "origin", "main", "--force"], "push")
 print("SUCCESS" if rc == 0 else "FAILED")

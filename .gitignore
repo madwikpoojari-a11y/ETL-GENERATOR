@@ -41,8 +41,9 @@ data/ecommerce_clean_reference.csv
 Thumbs.db
 desktop.ini
 
-# Streamlit
-.streamlit/
+# Streamlit — keep config, ignore secrets
+# .streamlit/
+.streamlit/secrets.toml
 
 # Pytest cache
 .pytest_cache/
