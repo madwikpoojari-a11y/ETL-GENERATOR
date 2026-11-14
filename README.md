@@ -1,31 +1,81 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=32&pause=1000&color=6BBAA7&center=true&vCenter=true&width=700&lines=⚡+ETL-GENERATOR+AGENT;Self-Healing+Data+Pipeline;Automated+%7C+Intelligent+%7C+Production-Ready" alt="Typing SVG" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:6BBAA7,50:6C648B,100:FBA100&text=ETL%20GENERATOR%20AGENT&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Autonomous%20Self-Healing%20Data%20Pipeline&descAlignY=58"/>
 
-<br/>
+<br>
+
+## 🧠 Transform Dirty Data into Trusted Data Automatically
+
+### Automated ETL • Data Quality Intelligence • Self-Healing Rules Engine • Full Auditability
+
+<br>
 
 ![Python](https://img.shields.io/badge/Python-3.11+-6BBAA7?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-FBA100?style=for-the-badge&logo=streamlit&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-3-6C648B?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-2.0+-B6A19E?style=for-the-badge&logo=pandas&logoColor=white)
+
+<br>
+
 ![Tests](https://img.shields.io/badge/Tests-33%2F33_Passing-6BBAA7?style=for-the-badge&logo=pytest&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-FBA100?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-5_Layers-6C648B?style=for-the-badge)
+![Pipeline](https://img.shields.io/badge/Pipeline-10_Stages-B6A19E?style=for-the-badge)
 
-<br/>
+<br><br>
 
-> **An intelligent data engineering system that automatically ingests dirty CSV data,
-> detects quality issues, applies autonomous self-healing rules, cleans and transforms
-> the dataset, loads it into SQLite, and provides a full audit trail — zero manual intervention.**
+![Quality](https://img.shields.io/badge/Data_Quality-5_Dimensions-6BBAA7?style=flat-square)
+![Healing](https://img.shields.io/badge/Self_Healing-6_Rules-FBA100?style=flat-square)
+![Audit](https://img.shields.io/badge/Auditability-Full_Traceability-6C648B?style=flat-square)
+![Production](https://img.shields.io/badge/Production-Ready-B6A19E?style=flat-square)
 
-<br/>
+<br><br>
 
----
+> ### ⚡ Dirty CSV In → Intelligent Validation → Autonomous Healing → Production-Ready Data Out
+
+<br>
+
+<table>
+<tr>
+<td align="center"><b>📥 Extract</b></td>
+<td align="center"><b>🔍 Validate</b></td>
+<td align="center"><b>🧠 Heal</b></td>
+<td align="center"><b>🧹 Clean</b></td>
+<td align="center"><b>⚙️ Transform</b></td>
+<td align="center"><b>🗄️ Load</b></td>
+<td align="center"><b>📊 Report</b></td>
+</tr>
+</table>
 
 </div>
 
+---
+
+## 🚀 Overview
+
+ETL-GENERATOR AGENT is a production-inspired autonomous ETL platform that detects data quality issues, applies deterministic self-healing rules, transforms dirty datasets, loads validated data into SQLite, and produces complete audit reports — zero manual intervention.
+
+**What makes it different:**
+
+- Rules-based self-healing agent — no LLMs, no black boxes, fully deterministic
+- Every action logged with rule ID, trigger condition, and outcome
+- Before/after quality score comparison with 5 dimensions
+- Works on any CSV — not tied to one schema
+- Production-like layered architecture (5 layers, 11 modules)
+
+```
+Dirty CSV  ──►  Extract  ──►  Validate  ──►  Self-Heal  ──►  Clean  ──►  Load  ──►  Report
+                                ↑                 ↑
+                         Null Detection      6 Healing Rules
+                         Dupe Detection      Auto-triggered
+                         Type Mismatch       Fully logged
+                         Format Check        Auditable
+```
+
+---
+
 ## 📌 Table of Contents
 
-- [Overview](#-overview)
 - [Live Demo Flow](#-live-demo-flow)
 - [Architecture](#-architecture)
 - [Self-Healing Agent](#-self-healing-agent)
@@ -41,37 +91,12 @@
 
 ---
 
-## 🧠 Overview
-
-The **Auto-ETL Generator Agent** solves a core problem in data engineering — dirty data entering pipelines without detection or correction.
-
-Traditional ETL pipelines require a data engineer to manually inspect every CSV, identify issues, write fix scripts, and re-run. This project eliminates that entirely.
-
-```
-Dirty CSV  ──►  Extract  ──►  Validate  ──►  Self-Heal  ──►  Clean  ──►  Load  ──►  Report
-                                ↑                 ↑
-                         Null Detection      6 Healing Rules
-                         Dupe Detection      Auto-triggered
-                         Type Mismatch       Fully logged
-                         Format Check        Auditable
-```
-
-**What makes it different:**
-
-- Rules-based self-healing agent — no LLMs, no black boxes, fully deterministic
-- Every action logged with rule ID, trigger condition, and outcome
-- Before/after quality score comparison with 5 dimensions
-- Works on any CSV — not tied to one schema
-- Production-like layered architecture (5 layers, 11 modules)
-
----
-
 ## 🎬 Live Demo Flow
 
 ```
 1. Open http://localhost:8501
 2. Navigate → 📂 Upload & Preview
-3. Click "Real E-Commerce Dataset" or upload your own CSV
+3. Click "Real Retail Dataset" or upload your own CSV
 4. Navigate → 🚀 Run Pipeline → click Execute
 5. Navigate → 🏠 Dashboard → see quality jump, healing log, pipeline stages
 6. Navigate → 📊 Results & Reports → download cleaned CSV, reports, logs
@@ -148,7 +173,7 @@ The agent runs between validation and cleaning. It evaluates 6 deterministic rul
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                    SELF-HEALING AGENT                            │
-├─────────┬──────────────────────────┬───────────────────────────-┤
+├─────────┬──────────────────────────┬────────────────────────────┤
 │ Rule ID │ Trigger Condition        │ Action Taken               │
 ├─────────┼──────────────────────────┼────────────────────────────┤
 │ RULE-01 │ Expected column missing  │ Fuzzy-match rename         │
@@ -171,8 +196,9 @@ The agent runs between validation and cleaning. It evaluates 6 deterministic rul
 ```
 
 Every triggered rule produces a log entry:
+
 ```
-2026-11-14 15:52:01 | WARNING  | src.agent.healing_agent | [RULE-04] Duplicate rate 3.2% exceeded threshold 5% → drop_duplicates applied | HEALED
+2026-11-14 15:52:01 | WARNING | src.agent.healing_agent | [RULE-04] Duplicate rate 3.2% exceeded threshold 5% → drop_duplicates applied | HEALED
 ```
 
 ---
@@ -212,7 +238,8 @@ ETL-GENERATOR/
 │
 ├── data/
 │   ├── generate_dataset.py         ← Synthetic dirty data generator
-│   └── download_real_data.py       ← Real e-commerce dataset downloader
+│   ├── download_real_data.py       ← Real Kaggle dataset downloader
+│   └── ecommerce_dataset.csv       ← Real retail dataset (Kaggle)
 │
 ├── src/
 │   ├── ingestion/
@@ -290,7 +317,7 @@ ETL-GENERATOR/
 
 ## ⚡ Quick Start
 
-**Clone and run in 3 commands:**
+**Clone and run:**
 
 ```bash
 git clone https://github.com/madwikpoojari-a11y/ETL-GENERATOR.git
@@ -302,9 +329,7 @@ streamlit run app.py
 
 Open **http://localhost:8501**
 
----
-
-**To use the real Kaggle retail dataset (1,050 rows, 9 columns):**
+**To use the real Kaggle retail dataset (already included):**
 
 ```bash
 python data/download_real_data.py
@@ -312,18 +337,11 @@ python data/download_real_data.py
 
 Then go to Upload & Preview → click **"Real E-Commerce Dataset"**
 
----
-
 **To run all tests:**
 
 ```bash
 pip install pytest
 python -m pytest tests/ -v
-```
-
-Expected output:
-```
-33 passed in 2.56s
 ```
 
 ---
@@ -428,8 +446,6 @@ tests/test_validation.py::test_schema_inferrer_detects_string      PASSED
 
 ---
 
-## 👨‍💻 Author
-
 <div align="center">
 
 **Built as a college project demonstrating production-grade data engineering practices.**
@@ -438,8 +454,10 @@ tests/test_validation.py::test_schema_inferrer_detects_string      PASSED
 
 [![GitHub](https://img.shields.io/badge/GitHub-madwikpoojari--a11y-6BBAA7?style=for-the-badge&logo=github)](https://github.com/madwikpoojari-a11y)
 
----
+<br>
 
 *"Messy CSV in. Clean data out. The pipeline fixes itself."*
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:FBA100,50:6C648B,100:6BBAA7&section=footer"/>
 
 </div>
