@@ -339,26 +339,39 @@ def gauge_chart(value, title, color=None):
     fig = go.Figure(go.Indicator(
         mode="gauge+number",
         value=value,
-        title={"text": title, "font": {"size": 12, "color": THEME["text_muted"]}},
-        number={"font": {"size": 28, "family": "JetBrains Mono", "color": THEME["text"]},
+        title={"text": title, "font": {"size": 11, "color": THEME["text_muted"]}},
+        number={"font": {"size": 36, "family": "JetBrains Mono", "color": THEME["text"]},
                 "suffix": "%"},
         gauge={
-            "axis": {"range": [0, 100], "tickcolor": THEME["text_muted"],
-                     "tickfont": {"size": 9}, "nticks": 5},
-            "bar": {"color": color, "thickness": 0.7},
+            "axis": {
+                "range": [0, 100],
+                "tickcolor": THEME["text_muted"],
+                "tickfont": {"size": 9},
+                "nticks": 6,
+            },
+            "bar": {"color": color, "thickness": 0.65},
             "bgcolor": THEME["card"],
             "bordercolor": THEME["border"],
             "borderwidth": 1,
             "steps": [
-                {"range": [0, 40],  "color": "rgba(239,68,68,0.15)"},
-                {"range": [40, 70], "color": "rgba(245,158,11,0.15)"},
-                {"range": [70, 100],"color": "rgba(34,197,94,0.1)"},
+                {"range": [0,  40], "color": "rgba(239,68,68,0.12)"},
+                {"range": [40, 70], "color": "rgba(245,158,11,0.12)"},
+                {"range": [70,100], "color": "rgba(34,197,94,0.08)"},
             ],
-            "threshold": {"line": {"color": color, "width": 2},
-                          "thickness": 0.8, "value": value},
+            "threshold": {
+                "line": {"color": color, "width": 2},
+                "thickness": 0.8,
+                "value": value,
+            },
         },
     ))
-    fig.update_layout(**plotly_layout(height=200))
+    fig.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Inter", color=THEME["text_muted"], size=11),
+        height=260,
+        margin=dict(l=20, r=20, t=40, b=30),
+    )
     return fig
 
 def bar_chart(x, y, title, color=None, horizontal=False):
@@ -1007,7 +1020,7 @@ elif page == "🔍  Validation":
         section_label("DATA QUALITY SCORE BEFORE CLEANING")
 
         sc_col = "#3D8C7A" if q["total_score"] >= 80 else THEME["warning"] if q["total_score"] >= 60 else THEME["error"]
-        ql, qm, qr = st.columns([1, 2, 1])
+        ql, qm, qr = st.columns([1, 3, 1])
         with qm:
             st.plotly_chart(gauge_chart(q["total_score"], "TOTAL QUALITY SCORE", sc_col),
                            use_container_width=True, config=plotly_config())
